@@ -11,10 +11,7 @@ export function countTokens(text: string): number {
 /**
  * Calculate token reduction percentage
  */
-export function calculateReduction(
-  jsonSize: number,
-  toonSize: number
-): number {
+export function calculateReduction(jsonSize: number, toonSize: number): number {
   return Math.round(((jsonSize - toonSize) / jsonSize) * 100);
 }
 
@@ -30,4 +27,3 @@ export function formatTokenStats(jsonTokens: number, toonTokens: number) {
     reduction: `${reduction}%`,
   };
 }
-

@@ -73,4 +73,3 @@ describe('TOON Encoder - Basic functionality', () => {
     expect(encode(-0)).toBe('0');
   });
 });
-

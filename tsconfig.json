@@ -26,4 +26,3 @@
   "include": ["src/**/*", "cli/**/*", "tests/**/*"],
   "exclude": ["node_modules", "dist"]
 }
-

@@ -36,10 +36,7 @@ export function loadFixturesFromDir(dirPath: string): TestFixture[] {
  * Get all official encode fixtures
  */
 export function getEncodeFixtures(): TestFixture[] {
-  const fixturesDir = join(
-    process.cwd(),
-    'tests/fixtures/official/encode'
-  );
+  const fixturesDir = join(process.cwd(), 'tests/fixtures/official/encode');
   return loadFixturesFromDir(fixturesDir);
 }
 
@@ -47,10 +44,6 @@ export function getEncodeFixtures(): TestFixture[] {
  * Get all official decode fixtures
  */
 export function getDecodeFixtures(): TestFixture[] {
-  const fixturesDir = join(
-    process.cwd(),
-    'tests/fixtures/official/decode'
-  );
+  const fixturesDir = join(process.cwd(), 'tests/fixtures/official/decode');
   return loadFixturesFromDir(fixturesDir);
 }
-

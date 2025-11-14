@@ -45,9 +45,7 @@
       "name": "parses list arrays containing objects with nested properties",
       "input": "items[1]:\n  - id: 1\n    nested:\n      x: 1",
       "expected": {
-        "items": [
-          { "id": 1, "nested": { "x": 1 } }
-        ]
+        "items": [{ "id": 1, "nested": { "x": 1 } }]
       },
       "specSection": "9.4"
     },
@@ -71,9 +69,7 @@
       "name": "parses objects containing arrays (including empty arrays) in list format",
       "input": "items[1]:\n  - name: test\n    data[0]:",
       "expected": {
-        "items": [
-          { "name": "test", "data": [] }
-        ]
+        "items": [{ "name": "test", "data": [] }]
       },
       "specSection": "9.4"
     },
@@ -82,7 +78,13 @@
       "input": "items[1]:\n  - matrix[2]:\n    - [2]: 1,2\n    - [2]: 3,4\n    name: grid",
       "expected": {
         "items": [
-          { "matrix": [[1, 2], [3, 4]], "name": "grid" }
+          {
+            "matrix": [
+              [1, 2],
+              [3, 4]
+            ],
+            "name": "grid"
+          }
         ]
       },
       "specSection": "9.2"
@@ -91,7 +93,10 @@
       "name": "parses nested arrays of primitives",
       "input": "pairs[2]:\n  - [2]: a,b\n  - [2]: c,d",
       "expected": {
-        "pairs": [["a", "b"], ["c", "d"]]
+        "pairs": [
+          ["a", "b"],
+          ["c", "d"]
+        ]
       },
       "specSection": "9.2"
     },
@@ -99,7 +104,10 @@
       "name": "parses quoted strings and mixed lengths in nested arrays",
       "input": "pairs[2]:\n  - [2]: a,b\n  - [3]: \"c,d\",\"e:f\",\"true\"",
       "expected": {
-        "pairs": [["a", "b"], ["c,d", "e:f", "true"]]
+        "pairs": [
+          ["a", "b"],
+          ["c,d", "e:f", "true"]
+        ]
       },
       "specSection": "9.2"
     },
@@ -183,10 +191,7 @@
       "name": "parses quoted key with list array format",
       "input": "\"x-items\"[2]:\n  - id: 1\n  - id: 2",
       "expected": {
-        "x-items": [
-          { "id": 1 },
-          { "id": 2 }
-        ]
+        "x-items": [{ "id": 1 }, { "id": 2 }]
       },
       "specSection": "9.4"
     }

@@ -2,11 +2,7 @@
  * TOON value types
  */
 export type ToonPrimitive = string | number | boolean | null;
-export type ToonValue =
-  | ToonPrimitive
-  | ToonObject
-  | ToonArray
-  | ToonValue[];
+export type ToonValue = ToonPrimitive | ToonObject | ToonArray | ToonValue[];
 
 export interface ToonObject {
   [key: string]: ToonValue;
@@ -65,4 +61,3 @@ export class ToonDecodeError extends ToonError {
     this.name = 'ToonDecodeError';
   }
 }
-

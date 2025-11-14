@@ -73,10 +73,7 @@ function parseTabular(
   // Parse rows
   for (let i = 0; i < count; i++) {
     if (lineIndex >= lines.length) {
-      throw new ToonDecodeError(
-        `Expected ${count} rows, got ${i}`,
-        lineIndex
-      );
+      throw new ToonDecodeError(`Expected ${count} rows, got ${i}`, lineIndex);
     }
 
     const line = lines[lineIndex];
@@ -292,4 +289,3 @@ function parseLines(lines: string[], startIndex: number): ParseResult {
 
   return { value: result, linesConsumed: lineIndex - startIndex };
 }
-

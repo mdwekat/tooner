@@ -53,7 +53,10 @@
       "name": "parses nested arrays with tab delimiter",
       "input": "pairs[2\t]:\n  - [2\t]: a\tb\n  - [2\t]: c\td",
       "expected": {
-        "pairs": [["a", "b"], ["c", "d"]]
+        "pairs": [
+          ["a", "b"],
+          ["c", "d"]
+        ]
       },
       "specSection": "11"
     },
@@ -61,7 +64,10 @@
       "name": "parses nested arrays with pipe delimiter",
       "input": "pairs[2|]:\n  - [2|]: a|b\n  - [2|]: c|d",
       "expected": {
-        "pairs": [["a", "b"], ["c", "d"]]
+        "pairs": [
+          ["a", "b"],
+          ["c", "d"]
+        ]
       },
       "specSection": "11"
     },

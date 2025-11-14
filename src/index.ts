@@ -13,4 +13,3 @@ export type {
   ToonEncodeError,
   ToonDecodeError,
 } from './core/types.js';
-

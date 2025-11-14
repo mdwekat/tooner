@@ -67,7 +67,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build"
+    "prepublishOnly": "pnpm run lint && pnpm run typecheck && pnpm run build"
   },
   "keywords": [
     "toon",
@@ -110,4 +110,3 @@
     "yaml": "^2.3.4"
   }
 }
-

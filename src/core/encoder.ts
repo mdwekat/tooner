@@ -17,7 +17,7 @@ export function encode(value: ToonValue, options: EncodeOptions = {}): string {
 }
 
 /**
- * Decode TOON format to value  
+ * Decode TOON format to value
  * Note: Full decoder implementation in progress
  */
 export function decode(_toon: string, _options: EncodeOptions = {}): ToonValue {
@@ -76,11 +76,7 @@ function encodeRootArray(arr: unknown[], indent: string): string {
 /**
  * Encode a value (minimal implementation)
  */
-function encodeValue(
-  value: ToonValue,
-  depth: number,
-  indent: string
-): string {
+function encodeValue(value: ToonValue, depth: number, indent: string): string {
   if (
     value === null ||
     typeof value === 'boolean' ||

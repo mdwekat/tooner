@@ -20,4 +20,3 @@ export function decode(toon: string, options?: DecodeOptions): string {
   const obj = decodeCore(toon, options);
   return stringify(obj);
 }
-

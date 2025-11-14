@@ -84,4 +84,3 @@ describe('TOON Decoder - Basic functionality', () => {
     expect(decode('"null"')).toBe('null');
   });
 });
-

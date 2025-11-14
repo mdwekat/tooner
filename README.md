@@ -125,7 +125,7 @@ npx tooner decode input.toon -f yaml -o output.yaml
   - Strict mode
   - Custom indent size
 
-- ❌ **Testing**: 
+- ❌ **Testing**:
   - 217 of 363 tests failing (encoder incomplete)
   - Need decoder tests
   - Need integration tests
@@ -211,4 +211,3 @@ MIT © 2025
 
 - [TOON Specification](https://github.com/toon-format/spec)
 - [TOON Reference Implementation](https://github.com/toon-format/toon)
-

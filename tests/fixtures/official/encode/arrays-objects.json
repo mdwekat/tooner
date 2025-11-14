@@ -17,9 +17,7 @@
     {
       "name": "uses list format for objects with nested values",
       "input": {
-        "items": [
-          { "id": 1, "nested": { "x": 1 } }
-        ]
+        "items": [{ "id": 1, "nested": { "x": 1 } }]
       },
       "expected": "items[1]:\n  - id: 1\n    nested:\n      x: 1",
       "specSection": "9.4"
@@ -44,7 +42,13 @@
       "name": "uses list format for objects containing arrays of arrays",
       "input": {
         "items": [
-          { "matrix": [[1, 2], [3, 4]], "name": "grid" }
+          {
+            "matrix": [
+              [1, 2],
+              [3, 4]
+            ],
+            "name": "grid"
+          }
         ]
       },
       "expected": "items[1]:\n  - matrix[2]:\n    - [2]: 1,2\n    - [2]: 3,4\n    name: grid",
@@ -54,7 +58,13 @@
       "name": "uses tabular format for nested uniform object arrays",
       "input": {
         "items": [
-          { "users": [{ "id": 1, "name": "Ada" }, { "id": 2, "name": "Bob" }], "status": "active" }
+          {
+            "users": [
+              { "id": 1, "name": "Ada" },
+              { "id": 2, "name": "Bob" }
+            ],
+            "status": "active"
+          }
         ]
       },
       "expected": "items[1]:\n  - users[2]{id,name}:\n    1,Ada\n    2,Bob\n    status: active",
@@ -64,7 +74,10 @@
       "name": "uses list format for nested object arrays with mismatched keys",
       "input": {
         "items": [
-          { "users": [{ "id": 1, "name": "Ada" }, { "id": 2 }], "status": "active" }
+          {
+            "users": [{ "id": 1, "name": "Ada" }, { "id": 2 }],
+            "status": "active"
+          }
         ]
       },
       "expected": "items[1]:\n  - users[2]:\n    - id: 1\n      name: Ada\n    - id: 2\n    status: active",
@@ -89,9 +102,7 @@
     {
       "name": "encodes objects with empty arrays in list format",
       "input": {
-        "items": [
-          { "name": "test", "data": [] }
-        ]
+        "items": [{ "name": "test", "data": [] }]
       },
       "expected": "items[1]:\n  - name: test\n    data[0]:",
       "specSection": "10"
