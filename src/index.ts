@@ -1,7 +1,8 @@
 /**
  * Core TOON encoder/decoder exports
  */
-export { encode, decode } from './core/encoder.js';
+export { encode } from './core/encoder.js';
+export { decode } from './core/decoder.js';
 export type {
   ToonValue,
   ToonObject,

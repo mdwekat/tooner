@@ -24,15 +24,6 @@ export function encode(value: ToonValue, options: EncodeOptions = {}): string {
 }
 
 /**
- * Decode TOON format to value
- * Note: Full decoder implementation in progress
- */
-export function decode(_toon: string, _options: EncodeOptions = {}): ToonValue {
-  // Placeholder - full implementation in decoder.ts
-  throw new ToonEncodeError('Decoder not yet fully implemented');
-}
-
-/**
  * Encode primitive values
  */
 function encodePrimitive(

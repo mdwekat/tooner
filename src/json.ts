@@ -1,7 +1,8 @@
 /**
  * JSON <-> TOON converter
  */
-import { encode as encodeCore, decode as decodeCore } from './core/encoder.js';
+import { encode as encodeCore } from './core/encoder.js';
+import { decode as decodeCore } from './core/decoder.js';
 import type { EncodeOptions, DecodeOptions } from './core/types.js';
 
 /**

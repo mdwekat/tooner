@@ -3,6 +3,7 @@
  */
 import { parse } from '@iarna/toml';
 import { encode as encodeCore } from './core/encoder.js';
+import { decode as decodeCore } from './core/decoder.js';
 import type { EncodeOptions, DecodeOptions, ToonValue } from './core/types.js';
 
 /**
@@ -17,6 +18,8 @@ export function encode(toml: string, options?: EncodeOptions): string {
  * Decode TOON format to TOML string
  * Note: TOML stringification not implemented yet
  */
-export function decode(_toon: string, _options?: DecodeOptions): string {
-  throw new Error('TOML decode not yet implemented');
+export function decode(toon: string, options?: DecodeOptions): string {
+  const obj = decodeCore(toon, options);
+  // TOML stringification not implemented yet
+  return JSON.stringify(obj);
 }

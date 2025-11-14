@@ -14,8 +14,9 @@ export default defineConfig([
     sourcemap: true,
     clean: true,
     treeshake: true,
-    minify: false,
+    minify: true,
     outDir: 'dist',
+    external: ['yaml', '@iarna/toml', 'commander'],
   },
   {
     entry: {
@@ -27,8 +28,10 @@ export default defineConfig([
     sourcemap: true,
     clean: false,
     treeshake: true,
+    minify: true,
     outDir: 'dist',
     shims: true,
+    external: ['commander'],
     esbuildOptions(options) {
       options.banner = {
         js: '#!/usr/bin/env node',
