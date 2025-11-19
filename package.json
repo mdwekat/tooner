@@ -86,12 +86,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mdwekat/tooner.git"
+    "url": "git+https://github.com/dwekat/tooner.git"
   },
   "bugs": {
-    "url": "https://github.com/mdwekat/tooner/issues"
+    "url": "https://github.com/dwekat/tooner/issues"
   },
-  "homepage": "https://github.com/mdwekat/tooner#readme",
+  "homepage": "https://github.com/dwekat/tooner#readme",
   "devDependencies": {
     "@changesets/cli": "^2.29.7",
     "@types/node": "^24.10.1",
